@@ -1,0 +1,9 @@
+*.pem
+cert_key
+*.onnx
+yolov8n_openvino_model
+cert_key.tar
+*.pt
+*.png
+__pycache__/*
+.DS_Store
