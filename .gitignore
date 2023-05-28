@@ -7,3 +7,4 @@ cert_key.tar
 *.png
 __pycache__/*
 .DS_Store
+*.txt

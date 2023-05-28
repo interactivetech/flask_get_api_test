@@ -12,8 +12,9 @@ import json
 # model = YOLO('yolov8n.yaml')
 
 # Load a pretrained YOLO model (recommended for training)
-# model = YOLO('yolov8n.pt')
-model = YOLO('yolov8n_openvino_model/')
+#model = YOLO('yolov8n.pt')
+model = YOLO('yolov8n.onnx')
+# model = YOLO('yolov8n_openvino_model/')
 # # Export the model
 # model.export(format='openvino')
 def make_request(question_input: str):
@@ -24,8 +25,8 @@ def make_request(question_input: str):
         ]
     )
     return response
-openai.api_key = os.getenv("OPENAI_API_KEY")
-print("openai.api_key: ",openai.api_key)
+openai.api_key_path = "./key.txt"
+print("openai.api_key_path: ",openai.api_key_path)
 start_sequence = "\nAI:"
 restart_sequence = "\nHuman: "
 # import logging
